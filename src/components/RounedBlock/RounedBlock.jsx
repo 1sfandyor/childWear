@@ -1,10 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export const RounedBlock = ({className, px, py, pl, pr, children, type, href, text}) => {
 
   const classes = `flex items-center justify-center border rounded-full border-solid ${className} ${px} ${py} ${pl} ${pr}`;
-  const spanClass = `relative text-nowrap flex item-center justify-center`;
-
 
   const renderBlock = () => (
         <div className={`${classes} ${px} ${py} ${pl} ${pr}`}>
@@ -20,7 +19,7 @@ export const RounedBlock = ({className, px, py, pl, pr, children, type, href, te
 
   const renderLink = () => (
     <Link className={classes} to={href}>
-        <span className={`${spanClass}`}>{text}</span>
+        {children}
     </Link>
 )
 
