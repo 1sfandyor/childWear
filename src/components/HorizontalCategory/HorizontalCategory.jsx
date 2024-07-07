@@ -1,6 +1,8 @@
 
 import { Fragment } from "react";
 import { ProductCard } from "../ProductCard/ProductCard";
+import { RounedBlock } from "../RounedBlock/RounedBlock";
+import { MdOutlineAddShoppingCart } from "react-icons/md";
 
 export const HorizontalCategory = ({newCollection, topBestSeller}) => {
 
