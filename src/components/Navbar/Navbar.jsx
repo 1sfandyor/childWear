@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <nav className="flex flex-col items-start justify-between">
             {/* TOP NAV */}
-            <div className="mb-[11px]">
+            <div className="">
                 <ul className="flex items-center justify-between ">
                     {
                         topNav.map(item => {
@@ -23,7 +23,7 @@ const Navbar = () => {
             </div>
             
             {/* BOTTOM NAV */}
-            <div className="flex items-center justify-between w-full">
+            <div className="flex items-center justify-between w-full py-[11px] mb-[11px]">
                 <div className="flex items-center">
                     <h3 className="text-dark lg:text-base font-semibold mr-9">Women & Kids</h3>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
                     </ul>
 
                     <RounedBlock 
-                        to="login/"
+                        href="login/"
                         className={`flex items-center border-orenga text-orange`} 
                         py={'py-2.5'} 
                         px={'px-[1.4rem]'} >
