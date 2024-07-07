@@ -4,10 +4,10 @@ import Navbar from "../../components/Navbar/Navbar"
 const MainLayout = () => {
     return (
         <>
-            <header className="container">
+            <header className="lg:container">
                 <Navbar/>
             </header>
-            <main className="">
+            <main className="lg:container">
                 <Outlet/>
             </main>
             <footer className="text-center container">
