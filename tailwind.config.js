@@ -39,7 +39,7 @@ export default {
         orenga: '#FF5C00',
         coctail: '#EFE9E9',
         green: '#71A800',
-        red: 'FF0000',
+        red: '#FF0000',
         block: '#1F1E14',
         heavyDark: '#1F1814'
       }

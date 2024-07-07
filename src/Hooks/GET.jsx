@@ -1,12 +1,12 @@
-export const Get = async (api, setData) => {
-	try {
-		const response = await fetch(api); // API endpoint URL
-		if (!response.ok) {
-			throw new Error("Network response was not ok");
-		}
-		const jsonData = await response.json();
-		setData(jsonData);
-	} catch (error) {
-		console.error("Error fetching data:", error);
-	}
+import axios from 'axios';
+
+export const Get = async (API) => {
+    try {
+        const response = await axios.get(API);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching menu data:', error);
+        return [];
+    }
 };
+

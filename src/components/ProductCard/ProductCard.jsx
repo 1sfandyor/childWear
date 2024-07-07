@@ -1,13 +1,73 @@
-export const ProductCard = ({children, img, alt, heading, price, className, status, px, py}) => {
+import { FaAnglesRight } from "react-icons/fa6"
+import { RounedBlock } from "../RounedBlock/RounedBlock"
+import { Link } from "react-router-dom"
+
+export const ProductCard = ({count, size, key, img, alt, heading, price, className, status, vertical}) => {
 
   const HorizontalCard = () => (
-    <div className={`bg-geno ${className}`}>
-        {children}
-    </div>
+    size == 'big' 
+    ? <Link className={`flex items-start bg-geno font-primary pt-[75px] pr-[23px] pb-[31px] pl-10 ${className}`}>
+        <div className="flex flex-col items-start">
+          <small className="text-black/50 text-base mb-1">{count} одежд</small>
+          <h2 className="text-[32px] mb-3.5">{heading}</h2>
+          <p className="text-pomo mb-[191px]">от {price} uzs</p>
+        
+          <RounedBlock 
+            href={'/'}
+            className={`flex items-center`}
+            none={true}>
+
+            <FaAnglesRight className='mr-2' fontSize={7}/>
+            <span className="font-medium font-inter">Подробнее</span>
+          </RounedBlock>
+        </div>
+
+        <img className="shrink-0" src={img} alt={heading}/>
+      </Link>
+    : size == "wide"
+    ? <Link className={`flex justify-between items-start bg-geno font-primary pt-[14px] pr-[42px] pl-[46px] ${className}`}>
+          <div className="flex flex-col items-start mt-[44px]">
+            <small className="text-black/50 text-xs mb-0.5">{count} одежд</small>
+            <h2 className="text-lg mb-3">{heading}</h2>
+            <p className="text-green mb-[60px]">от {price} uzs</p>
+
+            <RounedBlock 
+              href={'/'}
+              className={`flex items-center`}
+              none={true}>
+
+              <FaAnglesRight className='mr-2' fontSize={7}/>
+              <span className="font-medium font-inter">Подробнее</span>
+            </RounedBlock>
+          </div>
+
+        <img src={img} alt={heading} width={268}/>
+      </Link>
+    : size == 'small'
+    ? <Link className={`flex w-[335px] items-start bg-geno font-primary pt-[46px] pr-[19px] pb-[26px] pl-[27px] ${className}`}>
+        <div className="flex flex-col items-start">
+          <small className="text-black/50 text-xs mb-0.5">{count} одежд</small>
+          <h2 className="text-lg mb-3">{heading}</h2>
+          <p className="text-green mb-[60px]">от {price} uzs</p>
+
+          <RounedBlock 
+            href={'/'}
+            className={`flex items-center`}
+            none={true}>
+
+            <FaAnglesRight className='mr-2' fontSize={7}/>
+            <span className="font-medium font-inter">Подробнее</span>
+          </RounedBlock>
+        </div>
+
+
+        <img src={img} alt={heading} width={151} height={151}/>
+      </Link>
+    : null
   )
 
   const VerticalCard = () => (
-    <div className={``}>
+    <div key={key} className={``}>
       <div className="bg-geno">
         <img src={img} alt={alt} />
       </div>
