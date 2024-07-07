@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
-import MainLayout from '../../Layout/MainLayout/MainLayout'
-import Home from '../Home/Home'
+import MainLayout from '../Layout/MainLayout/MainLayout'
+import Home from '../Pages/Home/Home'
 
 function App() {
 
