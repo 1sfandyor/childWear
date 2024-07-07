@@ -1,6 +1,7 @@
 import { FaAnglesRight } from "react-icons/fa6"
 import { RounedBlock } from "../RounedBlock/RounedBlock"
 import { Link } from "react-router-dom"
+import { MdOutlineAddShoppingCart } from "react-icons/md"
 
 export const ProductCard = ({count, size, img, alt, heading, price, className, status, vertical}) => {
 
@@ -67,7 +68,7 @@ export const ProductCard = ({count, size, img, alt, heading, price, className, s
   )
 
   const VerticalCard = () => (
-    <div className={`flex flex-col items-center justify-center mr-5 last:mr-0 mb-[120px]`}>
+    <div className={`flex flex-col items-start justify-center mr-5 last:mr-0 mb-[120px]`}>
       <div className="bg-geno px-10 py-[50px] w-full flex items-center justify-center">
         <img className="object-cover" src={img} alt={alt} />
       </div>
@@ -78,8 +79,17 @@ export const ProductCard = ({count, size, img, alt, heading, price, className, s
         <h2 className="text-xl mb-2">
           <Link>{heading}</Link>
         </h2>
-        <p className="font-normal">{price}</p>
+        <p className="font-normal mb-6">{price}</p>
       </div>
+
+      <RounedBlock 
+        type="button"
+        className={`flex items-center border-dark text-dark`} 
+        py={'py-[9px]'} 
+        px={'px-[12px]'}>
+        <MdOutlineAddShoppingCart className="mr-2.5"/>
+        <span className="font-medium font-primary">добавить в корзину</span>
+      </RounedBlock>
     </div>
   )
 
