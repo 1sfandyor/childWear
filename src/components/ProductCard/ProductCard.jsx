@@ -2,7 +2,7 @@ import { FaAnglesRight } from "react-icons/fa6"
 import { RounedBlock } from "../RounedBlock/RounedBlock"
 import { Link } from "react-router-dom"
 
-export const ProductCard = ({count, size, key, img, alt, heading, price, className, status, vertical}) => {
+export const ProductCard = ({count, size, img, alt, heading, price, className, status, vertical}) => {
 
   const HorizontalCard = () => (
     size == 'big' 
@@ -67,16 +67,18 @@ export const ProductCard = ({count, size, key, img, alt, heading, price, classNa
   )
 
   const VerticalCard = () => (
-    <div key={key} className={``}>
-      <div className="bg-geno">
-        <img src={img} alt={alt} />
+    <div className={`flex flex-col items-center justify-center mr-5 last:mr-0 mb-[120px]`}>
+      <div className="bg-geno px-10 py-[50px] w-full flex items-center justify-center">
+        <img className="object-cover" src={img} alt={alt} />
       </div>
 
       {/* INFO */}
-      <div>
-        <small>{status}</small>
-        <h2>{heading}</h2>
-        <p>{price}</p>
+      <div className="font-primary font-medium">
+        <small className="mb-2 text-xs text-red">{status}</small>
+        <h2 className="text-xl mb-2">
+          <Link>{heading}</Link>
+        </h2>
+        <p className="font-normal">{price}</p>
       </div>
     </div>
   )
