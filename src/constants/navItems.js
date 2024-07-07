@@ -1,25 +1,35 @@
 import {v4 as uuidv4} from 'uuid';
 
-export const navItems = [
+export const topNav = [
     {
         id: uuidv4(),
-        name: 'Home',
-        path: 'home'
+        name: 'О магазине',
+        path: 'about-store'
     },
     {
         id: uuidv4(),
-        name: 'About',
-        path: 'about'
+        name: 'Доставка и оплата',
+        path: 'delivery-i-payment'
     },
     {
         id: uuidv4(),
-        name: 'Contact',
-        path: 'contact'
+        name: 'Политика безопасности',
+        path: 'political-security'
     },
     {
         id: uuidv4(),
-        name: 'Features',
-        path: 'features'
+        name: 'Условия соглашения',
+        path: 'terms-of-agreement'
     },
     
+    {
+        id: uuidv4(),
+        name: 'Публичная оферта',
+        path: 'public-offer'
+    },
+    {
+        id: uuidv4(),
+        name: 'Наши гарантии',
+        path: 'our-guarantees'
+    },
 ]
